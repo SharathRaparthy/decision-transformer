@@ -22,6 +22,8 @@ class SequenceTrainer(Trainer):
             None, action_preds, None,
             None, action_target, None,
         )
+        # Get the shape of the loss tensor and print it
+        print("Loss shape: ", loss.shape)
 
         self.optimizer.zero_grad()
         loss.backward()
